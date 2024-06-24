@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch 1</title>
+    <!-- <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <style>
+        .container {
+            text-align: center;
+        }
+        .hrs, .mins, .seconds {
+            background-color: yellow;
+            height: 10px;
+            width: 30px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <div class="container bg-primary text-white pt-3 pb-3">
+        <h1>Stop Watch</h1>
+        <div class="hrs"></div>
+        <div class="mins"></div>
+        <div class="seconds"></div>
+    </div> -->
+
+
+
+    <span>  <p id="mins">0</p>
+            <p id="secs">0</p>
+    </span>
+    <script>
+        // const outerSec = () => {
+        //     let num = 0;
+        //     const innerSec = (x) => {
+        //         console.log(x++);
+        //     }
+        //     innerSec(num);
+        // }
+        // let seconds = setInterval(outerSec(), 1000);
+        
+        let num = 0;
+        let num1 = 0;
+        let seconds = setInterval(outerSec, 100);
+        function outerSec() {
+            ++num;
+            document.getElementById("secs").innerHTML = num;
+            // console.log(num);
+            if (num > 58) {
+                num = "00";
+                document.getElementById("secs").innerHTML = num;
+                // console.log(num);
+                clearInterval(seconds);
+                num1++
+                document.getElementById("mins").innerHTML = num1;
+                
+            }
+        }
+
+        let mins = setInterval(() => {
+            ++num1
+        }, 6000);
+    </script>
+
+
+
+
+
+
+
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide-Show</title>
+    <style>
+        .container {
+            background-color: blue;
+            height: 200px;
+            width: 500px;
+            margin-left: 50px;
+        }
+        #prev {
+            margin-left:190px;
+            width: 80px;
+        }
+        #next {
+            margin-left:70px;
+            width: 80px;
+        }
+        #img {
+            width: 200px;
+            height: 200px;
+            margin-left:140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="bgdiv">
+        <img src="./1.jpg" id="img">
+    </div><br>
+    <button id="prev" onclick="prevPic()">Previous</button>
+    <button id="next" onclick="nextPick()">Next</button>
+
+    <script>
+        let num = 1;
+        let pic = document.getElementById("img");
+        let bg = document.getElementById("bgdiv");
+        function nextPick() {
+            ++num;
+        if (num === 2) {
+            pic.src = "./2.jpg";
+            bg.style.backgroundColor = "red";
+        } else if (num === 3) {
+            pic.src = "./3.jpg";
+            bg.style.backgroundColor = "green";
+        } else if (num === 4) {
+            pic.src = "./4.jpg";
+            bg.style.backgroundColor = "orange";
+        }
+        else if (num === 5) {
+            num = 1;
+            pic.src = "./1.jpg";
+            bg.style.backgroundColor = "blue";
+        }
+        }
+        function prevPic() {
+            --num;
+            if (num === 0) {
+                num = 4;
+                pic.src = "./4.jpg";
+            bg.style.backgroundColor = "orange";
+            } else if (num === 3) {
+                pic.src = "./3.jpg";
+            bg.style.backgroundColor = "green";
+            } else if (num === 2) {
+                pic.src = "./2.jpg";
+            bg.style.backgroundColor = "red";
+            } else if (num === 1) {
+                pic.src = "./1.jpg";
+            bg.style.backgroundColor = "blue";
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>

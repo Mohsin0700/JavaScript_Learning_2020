@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <style>
+        * {
+            margin:0px;
+            padding: 0px;
+        }
+
+        .container {
+            background-color:aquamarine;
+            width: 300px;
+            height: 100px;
+            margin-left: 180px;
+            margin-top: 150px;
+            border: 2px solid brown;
+        }
+
+        .hrs, .mins, .seconds {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            float: left;
+            color: white;
+            font-size: 48px;
+        }
+
+        .hrs {
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+
+        .mins {
+            margin-top: 05px;
+            margin-left: 50px;
+        }
+
+        .seconds {
+            margin-top: -15px;
+            margin-left:50px;
+        }
+
+        #start, #stop {
+            background-color:red;
+            color: white;
+            font-weight: bolder;
+            font-size: 24px;
+            border:none;
+            height: 50px;
+            width:100px;
+            border-radius: 90px;
+            margin-right: 50px;
+        }
+
+        .buttons {
+            margin-left: 200px;
+            margin-top: 20px;
+        }
+
+        #start:hover, #stop:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hrs"><p id="hrs">00</p></div><br>
+        <div class="mins"><p id="mins">00</p></div><br>
+        <div class="seconds"><p id="secs">00</p></div>
+    </div>
+    <div class="buttons">
+        <button id="start" onclick="mainFunc();">START</button>
+        <button id="stop" onclick="stopFunc();">STOP</button>
+    </div>
+
+
+
+    <script>
+        let num = 0;
+        const mainFunc = () => {
+            var seconds = setInterval(() => {
+                ++num;
+                document.getElementById("secs").innerHTML = num;
+            }, 100);
+        }
+
+        const recycle = () => {
+            clearInterval()
+            document.getElementById("secs").innerHTML = 00;
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    background-color:burlywood;
+}
+
+.container {
+    width: 105%;
+    height: 80px;
+    background-color:rgb(241, 247, 248);
+    margin-left: -7px;
+    margin-top:-7px;
+    border:2px solid brown;
+}
+
+#logo {
+    width: 70px;
+    position: relative;
+    top:8px;
+    left: 15px;
+    float: left;
+}
+
+li {
+    position: relative;
+    left:150px;
+    top: 15px;
+    float: left;
+    margin-right:50px ;
+    list-style-type: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.nav-link:hover {
+    background-color: rgb(182, 219, 182);
+    transition: 400ms;
+    border:1px solid black;
+}
+
+.search {
+    position: relative;
+    top:15px;
+    left: 600px;
+}
+
+.search .btn {
+    background-color: yellow;
+    color: red;
+}
+.search .input {
+    background-color:lightgray;
+}
+
+#btn {
+    background-color:chartreuse;
+    width:6em;
+    height:25px;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+
+#btn-link {
+    text-decoration: none;
+    color: black;
+}
+
+#btn:hover {
+    font-weight: bold;
+    transition-duration: 200ms;
+    transform-style: preserve-3d;
+    line-height: 1.5em;
+}

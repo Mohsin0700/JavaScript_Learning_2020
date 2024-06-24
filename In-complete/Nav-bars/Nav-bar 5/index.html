@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-bar 5</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        .header ul {
+            display: flex;
+            justify-content: center;
+            background-color: lightblue;
+            height: 50px;
+            width: 100%;
+        }
+        .header li {
+            float: left;
+            list-style-type: none;
+            margin-right: 50px;
+            margin-top:12px;
+            overflow: hidden;
+        }
+        .header a {
+            text-decoration: none;
+            color: brown;
+            font-size:1.5em;
+        }
+        .header a:hover {
+            display: block;
+            background-color: black;
+            color:white;
+            transition:400ms;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </div>
+    
+    <script>
+        var home = document.write("<ul><li>Head</li><li>Body</li><li>Aside Bar</li><li>Footer</li></ul>")
+    </script>
+</body>
+</html>

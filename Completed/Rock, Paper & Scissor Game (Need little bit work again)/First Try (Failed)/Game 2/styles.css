@@ -1,0 +1,115 @@
+* {
+    margin:0px;
+    padding: 0px;
+}
+.container {
+    width: 100%;
+    height: 500px;
+    background-color: darkslategray;
+    position: fixed;
+}
+
+#gameName {
+    position: fixed;
+    top:-50px;
+    left:18%;
+}
+
+
+#startBtn  {
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  font-size:80px;
+  color:red;
+  border-radius: 90px;
+  position: fixed;
+  top: 40%;
+  left:41%;
+}
+
+#startBtn:hover {
+    cursor:pointer;
+}
+
+.opt1, .opt2, .opt3 {
+    height: 200px;
+    width: 200px;
+    margin-right: 150px;
+}
+
+.opt1 {
+    position: fixed;
+    top:150px;
+    left:170px;
+}
+
+.opt1:hover {
+    position: fixed;
+    height: 210px;
+    width: 210px;
+    top:130px;
+    left:170px;
+    transition: 500ms;
+}
+
+.opt2 {
+    position: fixed;
+    top:150px;
+    left:540px;
+}
+
+.opt2:hover {
+    position: fixed;
+    top:130px;
+    left:540px;
+    height: 210px;
+    width: 210px;
+    transition: 500ms;
+}
+
+.opt3 {
+    position:fixed;
+    top:150px;
+    left:920px;
+}
+
+.opt3:hover {
+    position:fixed;
+    top:130px;
+    left:920px;
+    height: 210px;
+    width: 210px;
+    transition: 500ms;
+}
+
+#winV, #lossP {
+    height: 400px;
+    width: 630px;
+    position:fixed;
+    top:50px;
+}
+
+.h1 {
+    color:white;
+    position: fixed;
+    right: 60px;
+    top:50px;
+}
+
+.line {
+    width: 10px;
+    height: 500px;
+    background-color:white;
+    border-style: dashed;
+    position: fixed;
+    top: -9px;
+    right: 700px;
+}
+
+#computerPic{
+    height: 270px;
+    position: fixed;
+    right:120px;
+    top: 140px;
+}

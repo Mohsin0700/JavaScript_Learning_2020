@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator 2</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen" id="scn">
+            <input type="text" name="Display" id="output">
+        </div>
+        <div class="numpad">
+            <table>
+                <tr>
+                    <td><button onclick="on_of();" class="nbtn" id="onof" style="background-color: green;">ON/OF</button></td>
+                    <td><button onclick="aC();" class="nbtn" id="AC" style="background-color: green;" onclick="reset();">AC</button></td>
+                    <td><button class="nbtn" id="C" style="background-color: green;" onclick="cL();">C</button></td>
+                </tr>
+                
+                <tr>
+                    <td><button class="nbtn" id="n1" onclick="getNum('1');">1</button></td>
+                    <td><button class="nbtn" id="n2" onclick="getNum('2')">2</button></td>
+                    <td><button class="nbtn" id="n3" onclick="getNum('3')">3</button></td>
+                </tr>
+                <tr>
+                    <td><button class="nbtn" id="n4" onclick="getNum('4')">4</button></td>
+                    <td><button class="nbtn" id="n5" onclick="getNum('5')">5</button></td>
+                    <td><button class="nbtn" id="n6" onclick="getNum('6')">6</button></td>
+                </tr>
+                <tr>
+                    <td><button class="nbtn" id="n7" onclick="getNum('7')">7</button></td>
+                    <td><button class="nbtn" id="n8" onclick="getNum('8')">8</button></td>
+                    <td><button class="nbtn" id="n9" onclick="getNum('9')">9</button></td>
+                </tr>
+                <tr>
+                    <td><button class="nbtn" id="n00" onclick="getNum('00')">00</button></td>
+                    <td><button class="nbtn" id="n0" onclick="getNum('0')">0</button></td>
+                    <td><button class="nbtn" id="nDot" onclick="getNum('.')">.</button></td>
+                </tr>
+            </table>
+             </div>
+            <div class="funcnum">
+                <table>
+                    <tr><td><button class="fbtn" id="add" onclick="getNum('+')">+</button></td></tr>
+                    <tr><td><button class="fbtn" id="sub" onclick="getNum('-')">-</button></td></tr>
+                    <tr><td><button class="fbtn" id="multi" onclick="getNum('*')">x</button></td></tr>
+                    <tr><td><button class="fbtn" id="div" onclick="getNum('/')">/</button></td></tr>
+                    <tr><td><button class="fbtn" id="equal" onclick="getRes();">=</button></td></tr>
+                </table>
+            </div>
+    </div>
+    
+    <script src="./script.js">
+    </script>
+</body>
+</html>

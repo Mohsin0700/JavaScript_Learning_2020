@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter 3</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 500px;
+            background-color: black;
+            border-top-left-radius:200px ;
+            border-top-right-radius:200px ;
+        }
+
+        .screen {
+            height: 130px;
+            width: 130px;
+            background-color: greenyellow;
+            position: absolute;
+            top:35px;
+            left:180px;
+            border-radius: 90px;
+            text-align: center;
+        }
+
+        .press {
+            height: 90px;
+            width: 90px;
+            background-color: greenyellow;
+            position: absolute;
+            top: 170px;
+            left: 320px;
+            border-radius: 90px;
+            font-weight: 900;
+            font-size:larger;
+        }
+
+        .press:hover {
+            color:red;
+            font-size:1.1em;
+        }
+
+        .reset {
+            height: 50px;
+            width: 50px;
+            background-color: greenyellow;
+            position: absolute;
+            top: 200px;
+            left: 110px;
+            border-radius: 90px;
+            font-size:10px;
+            font-weight: 900;
+        }
+
+        .reset:hover{
+            color:red;
+            font-size:0.5em;
+        }
+
+        .screen p {
+            font-size: 120px;
+            color: black;
+            position: absolute;
+            top:-122px;
+            /* left:33px; */
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="screen"><p id="display"></p></div><br>
+        <button class="press" onclick="count();">PRESS</button><br>
+        <button class="reset" onclick="delet();">RESET</button>
+    </div>
+
+    <script>
+        let x = 0;
+        function count() {
+            x++;
+            document.getElementById("display").innerHTML = x;
+        }
+
+        function delet() {
+            x = 0;
+            document.getElementById("display").innerHTML = 0;
+        }
+
+    </script>
+</body>
+</html>

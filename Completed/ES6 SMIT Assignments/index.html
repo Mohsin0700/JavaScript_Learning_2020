@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIT ES6 Assignment</title>
+</head>
+
+<body>
+    <script>
+
+        // **************************************************************************************
+        //                          SMIT CLASSES(ES6) ASSIGNMENT
+        // **************************************************************************************
+        // QUESTION NO.1
+
+        // Create a class called PersonAccount. It has firstname, lastname, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo, addIncome, addExpense and accountBalance methods. Incomes is an array of objects income and its description and expenses is also an array of objects having expense and its description.
+
+        class PersonAccount {
+            constructor(firstname, lastname, incomes, expenses) {
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.incomes = incomes;
+                this.expenses = expenses;
+            }
+
+            accountInfo = () => {
+                const title = `Account Title: ${this.firstname + this.lastname}`;
+                console.log(title);
+                const type = `Account Type: Current Account`;
+                console.log(type);
+            }
+
+            totalIncome = () => {
+                const tot = this.addIncome();
+                console.log(`Total Income ${tot}`);
+            }
+
+
+
+
+            totalExpense = () => {
+                const tot = this.addExpense();
+                console.log(`Total Expense ${tot}`);
+            }
+
+
+
+
+            addIncome = () => {
+                const incomeSource = [
+                    { Salary: 5000 },
+                    { overTime: 1000 },
+                    { extraAllownce: 4000 }
+                ]
+
+                const allIncomes = incomeSource[0].Salary + incomeSource[1].overTime + incomeSource[2].extraAllownce;
+                return allIncomes;
+            }
+
+
+            addExpense = () => {
+                const expenses = [
+                    { HouseRent: 2000 },
+                    { electrictyBIll: 500 },
+                    { NetPayment: 400 }
+                ]
+                const allExpenses = expenses[0].HouseRent + expenses[1].electrictyBIll + expenses[2].NetPayment;
+                return allExpenses;
+            }
+
+            accountBalance = () => {
+                const bal = this.addIncome() - this.addExpense();
+                console.log(`Balance ${bal}/-`);
+            }
+        }
+
+        const myAcc = new PersonAccount('Mohsin ', 'Hussain');
+
+        myAcc.accountInfo();
+        myAcc.totalIncome();
+        myAcc.totalExpense();
+        myAcc.addIncome();
+        myAcc.addExpense();
+        myAcc.accountBalance();
+
+
+
+        // **************************************************************
+        //                          QUESTION NO. 2 & 3
+        // **************************************************************
+        // (02) Create an Automobile class. The class will have name, model, color, type properties and create 
+        //      different methods e.g openOrCloseDoor() logs doors are opened or closed, start() logs car is ready for drive. 
+        
+        // (03) Create Car, Bus and Truck child class from the Automobile   Class.
+        
+        class Automobile {
+            constructor(name,model,color,type) {
+                this.name = name;
+                this.model = model;
+                this.color = color;
+                this.type = type;
+            }
+
+            openOrCloseDoor() {
+                console.log('Doors are closed');
+            }
+
+            start() {
+                console.log(`${this.name} is ready for drive`);
+            }
+        }
+
+        const Car = new Automobile('Car','Grandy','White', '4 Wheel');
+
+        console.log(Car);
+        console.log(Car.openOrCloseDoor());
+        console.log(Car.start());
+
+        const Bus = new Automobile('Bus', 'Coster', 'Green', '8 wheel')
+
+        console.log(Bus.openOrCloseDoor());
+        console.log(Bus.start());
+
+        const Truck = new Automobile('Truck', 'Roadrunner', 'Blue', '16 wheeler')
+
+        console.log(Truck.openOrCloseDoor());
+        console.log(Truck.start());
+
+
+    </script>
+</body>
+
+</html>

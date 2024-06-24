@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+}
+.header {
+    height: 43px;
+    width: 100%;
+    background-color:aquamarine;
+    border: 1px solid black;
+}
+.logo {
+    float: left;
+}
+
+.ul li {
+    float: left;
+    margin-right:20px;
+    list-style-type: none;
+    color: black;
+    font-weight: bolder;
+    line-height: 43px;
+    display: block;
+    width: 60px;
+    text-align: center;
+}
+.ul {
+    margin-left:500px;
+    margin-top: 0px;
+}
+
+.ul li:hover {
+    background-color: black;
+    color:white;
+    transition: 1200ms;
+    transition-delay: 100ms;
+}

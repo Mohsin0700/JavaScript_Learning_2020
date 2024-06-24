@@ -1,0 +1,58 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-item:hover {
+    border-bottom: 3px solid greenyellow;
+}
+
+.nav-item:hover {
+    transition: 200ms;  
+}
+.nav-item {
+    font-weight: bolder !important;
+    width: 6rem;
+    margin-left: 1rem;
+}
+
+.nav-link {
+    width: 6rem;
+    text-align: center !important;
+}
+
+.navbar-brand {
+    color:greenyellow !important;
+}
+
+.navbar-toggler-icon {
+    background-color: greenyellow;
+    border-radius: 8px;
+}
+
+#header {
+    height: 60vh;
+    background-color: black;
+    padding-top: 9rem;
+}
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 9vh;
+    color:greenyellow !important;
+}
+
+
+.navbar {
+     position: fixed !important;
+}

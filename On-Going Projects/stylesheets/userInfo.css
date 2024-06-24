@@ -1,0 +1,18 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.userInfo {
+    height: 75vh;
+    width: 70vw;
+    display: flex;
+}
+
+.body {
+    height: 100vh !important;
+    width: 100vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

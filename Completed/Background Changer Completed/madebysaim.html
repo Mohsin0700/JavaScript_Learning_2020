@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #button{
+            height: 40px;
+            width: 60px;
+            border: 2px solid black;
+        }
+        </style>
+        <div class="container">
+        <button id="button" onclick="random()">Click here</button>
+        </div>
+    <script>
+        const btn = document.querySelector('#button');
+        btn.addEventListener('click' , function () {
+        const color = 'rgb('+ random(225) + ',' + random(225) + ',' + random(225) +')';
+        document.body.style.backgroundColor = color;
+    });
+
+        function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+    };
+    </script>
+</body>
+</html>
